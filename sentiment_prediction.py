@@ -45,3 +45,17 @@ for sentiment in sentiments:
 mcd_data['sentiment'] = sentiment_labels
 
 # print(mcd_data[['review', 'sentiment']])
+
+# Dataset splitting
+X = mcd_data['review']
+y = mcd_data['sentiment']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=10)
+
+# Vectorization >> to convert the textual data into a numerical representation suitable for ML algorithms. This process involved transforming the reviews into a format that captures their features and patterns effectively.
+vectorizer = TfidfVectorizer()
+X_train_tfidf = vectorizer.fit_transform(X_train)
+X_test_tfidf = vectorizer.fit_transform(X_test)
+
+# Model training (Support Vector Classifier)
+model = SVC()
+model.fit(X_train_tfidf, y_train)
