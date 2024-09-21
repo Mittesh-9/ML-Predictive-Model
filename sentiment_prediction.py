@@ -54,8 +54,38 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Vectorization >> to convert the textual data into a numerical representation suitable for ML algorithms. This process involved transforming the reviews into a format that captures their features and patterns effectively.
 vectorizer = TfidfVectorizer()
 X_train_tfidf = vectorizer.fit_transform(X_train)
-X_test_tfidf = vectorizer.fit_transform(X_test)
+X_test_tfidf = vectorizer.transform(X_test)
 
 # Model training (Support Vector Classifier)
 model = SVC()
 model.fit(X_train_tfidf, y_train)
+
+y_prediction = model.predict(X_test_tfidf)
+
+#accuracy = accuracy_score(y_test, y_prediction)
+#print("Accuracy:", accuracy)
+#print("Classification report:")
+#print(classification_report(y_test, y_prediction))
+
+# sentiment prediction function >>
+def predict_sentiment(review):
+    review_tfidf = vectorizer.transform([review])
+    sentiment = model.predict(review_tfidf)
+    return sentiment[0]
+
+
+# sample testing
+#new_review = "This restaurant has excellent service and delicious food."
+#predicted_sentiment = predict_sentiment(new_review)
+#print("Predicted sentiment:", predicted_sentiment)
+
+#new_review2 = "This restaurant sucks."
+#predicted_sentiment = predict_sentiment(new_review2)
+#print("Predicted sentiment:", predicted_sentiment)
+
+#new_review3 = "This is dull"
+#predicted_sentiment = predict_sentiment(new_review4)
+#print("Predicted sentiment:", predicted_sentiment)
+
+
+
