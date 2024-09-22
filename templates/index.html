@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+<body>
+    <h1>Restaurant Review Sentiment Analysis</h1>
+    <form action="/predict" method="POST">
+        <textarea name="review" rows="5" cols="50" placeholder="Enter your review here"></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if review %}
+        <h2>Review: "{{ review }}"</h2>
+        <h3>Predicted Sentiment: {{ sentiment }}</h3>
+    {% endif %}
+    
+</body>
+</html>
+

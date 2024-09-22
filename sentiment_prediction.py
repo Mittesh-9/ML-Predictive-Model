@@ -87,5 +87,3 @@ def predict_sentiment(review):
 #predicted_sentiment = predict_sentiment(new_review4)
 #print("Predicted sentiment:", predicted_sentiment)
 
-
-
