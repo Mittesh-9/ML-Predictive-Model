@@ -1,4 +1,5 @@
 import pandas as pd
+# Uncomment 'import nltk' and add 'nltk.download('vader_lexicon')' after it to ensure VADER lexicon is available for SentimentIntensityAnalyzer
 # import nltk
 # nltk.download('vader_lexicon')
 from nltk.sentiment import SentimentIntensityAnalyzer
