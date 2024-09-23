@@ -1,5 +1,6 @@
 import pandas as pd
 # import nltk
+# nltk.download('vader_lexicon')
 from nltk.sentiment import SentimentIntensityAnalyzer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
