@@ -13,16 +13,16 @@ This repository contains a Machine Learning project focused on **Sentiment Analy
 
 ### Prerequisites
 
-Make sure you have Python 3.x installed on your system. Install the required Python libraries using the `requirements.txt` file:
+Make sure you have Python 3.12.3 installed on your system. Install the required Python libraries using the `requirements.txt` file:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ### Required Libraries
 
-- Flask
-- pandas
-- scikit-learn
-- nltk
+- **Flask**
+- **pandas**
+- **scikit-learn**
+- **nltk** (Uncomment 'import nltk' from the sentiment_prediction file and add 'nltk.download('vader_lexicon')' after it to ensure VADER lexicon is available for SentimentIntensityAnalyzer)
 
 ## Dataset
 
@@ -50,7 +50,7 @@ The project includes a web application built using Flask. The app allows users t
 - Enter your review in the text box and click "Submit".
 - The predicted sentiment will be displayed on the same page.
 
-![Screenshot](path/to/screenshot.png)
+![Screenshot](screenshots/Screenshot_2024-09-22_at_23-21-33_Sentiment_Analysis.png)
 
 ## Contributing
 
