@@ -1,7 +1,7 @@
 import pandas as pd
-# Uncomment 'import nltk' and add 'nltk.download('vader_lexicon')' after it to ensure VADER lexicon is available for SentimentIntensityAnalyzer
-# import nltk
-# nltk.download('vader_lexicon')
+# adding 'nltk.download('vader_lexicon'after import nltk to ensure VADER lexicon is available for SentimentIntensityAnalyzer
+import nltk
+nltk.download('vader_lexicon')
 from nltk.sentiment import SentimentIntensityAnalyzer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
