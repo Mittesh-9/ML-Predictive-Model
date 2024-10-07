@@ -17,7 +17,7 @@ def predict():
 
 if __name__ == '__main__':
     # Get the port from environment variable and default to 5000 for local development
-    port = int(os.environ.get('PORT', 8000))
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
-    print(f"Running on port: {port}")
+    #print(f"Running on port: {port}")
 
