@@ -62,9 +62,9 @@ model.fit(X_train_tfidf, y_train)
 y_prediction = model.predict(X_test_tfidf)
 
 accuracy = accuracy_score(y_test, y_prediction)
-#print("Accuracy:", accuracy)
-#print("Classification report:")
-#print(classification_report(y_test, y_prediction))
+# print("Accuracy:", accuracy)
+# print("Classification report:")
+# print(classification_report(y_test, y_prediction))
 
 # sentiment prediction function >>
 def predict_sentiment(review):
