@@ -1,4 +1,5 @@
 import pandas as pd
+import sqlite3
 # adding 'nltk.download('vader_lexicon'after import nltk to ensure VADER lexicon is available for SentimentIntensityAnalyzer
 import nltk
 nltk.download('vader_lexicon')
@@ -42,6 +43,12 @@ for sentiment in sentiments:
 
 # adding the sentiment labels to the dataframe
 mcd_data['sentiment'] = sentiment_labels
+
+# Save to SQLite database (NEW ADDITION)
+# conn = sqlite3.connect("sentiments.db")  # Connects or creates 'sentiments.db'
+# mcd_data[['review', 'sentiment']].to_sql("mcd_sentiments", conn, if_exists="replace", index=False)
+# conn.close()
+# print("Sentiment data saved to SQLite database!")
 
 # print(mcd_data[['review', 'sentiment']])
 
